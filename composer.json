@@ -1,0 +1,41 @@
+{
+    "name": "microffice/eloquent-units",
+    "description": "A Laravel Eloquent Units Handler for Microffice.",
+    "keywords": ["CRM", "ERP", "microffice", "units"],
+    "type": "package",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Stoemp Saucisse",
+            "email": "stoempsaucisse@hotmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.8",
+        "illuminate/support": "^5.0",
+        "illuminate/database": "~5.0",
+        "illuminate/console": "~5.0",
+        "illuminate/events": "~5.0",
+        "illuminate/filesystem": "~5.0",
+        "vlucas/phpdotenv": "~1.0",
+        "microffice/units-service-provider": "^0.1"
+    },
+    "require-dev": {
+        "orchestra/testbench": "~3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Microffice\\": "src/Microffice/"
+        },
+        "classmap": [
+            "src/commands"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Microffice\\EloquentUnits\\Tests\\": "tests/",
+            "": ["tests/migrations", "tests/seeds"]
+        }
+    },
+    "minimum-stability": "stable"
+}
